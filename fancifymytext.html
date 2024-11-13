@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancify My Text</title>
+    <style>
+        #output {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <!-- Link to the external JavaScript file -->
+    <script src="fancifymytext.js" defer></script>
+</head>
+<body>
+    <h1>Fancify My Text</h1>
+
+    <fieldset>
+        <legend>Text</legend>
+        <textarea id="textInput" rows="4" cols="30" placeholder="Type your text here..."></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Fancify</legend>
+        <button onclick="showAlert(); increaseFontSize();">Bigger!</button>
+        <br><br>
+        <input type="radio" id="fancyShmancy" name="style" onchange="radioAlert()">
+        <label for="fancyShmancy">FancyShmancy</label>
+        <br>
+        <input type="radio" id="boringBetty" name="style" onchange="radioAlert()" checked>
+        <label for="boringBetty">BoringBetty</label>
+    </fieldset>
+
+    <button onclick="mooText()">Moo</button>
+
+    <div id="output"></div>
+</body>
+</html>
